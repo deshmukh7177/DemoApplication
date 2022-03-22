@@ -1,0 +1,65 @@
+<!-- <app-user></app-user> -->
+<!-- <app-style></app-style>
+<app-one></app-one> -->
+<!-- <app-switchcase></app-switchcase> -->
+
+<!-- <app-show-api-data></app-show-api-data> -->
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="colmd-12">
+            <app-myuser *ngFor="let user of users;let i=index" [id]="i" [user]="user"></app-myuser>
+        </div>
+    </div>
+    
+</div> -->
+
+<!-- <ul>
+    <li><a routerLink="/emplist" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/showapidata" routerLinkActive="active">ShowApiData</a></li>
+    <li><a routerLink="/users" routerLinkActive="active">users</a></li>
+</ul> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+
+        
+        <a class="nav-item nav-link" routerLink="/rxjs" routerLinkActive="active">RXJS</a>
+        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+        <a class="nav-item nav-link" routerLink="/emplist" routerLinkActive="active">Emplist</a>
+        <a class="nav-item nav-link" routerLink="/showapidata" routerLinkActive="active">Showapidata</a>
+        <a class="nav-item nav-link" routerLink="/style" routerLinkActive="active">Style</a>
+        <!-- <a class="nav-item nav-link" routerLink="/home/100/deshmukukh" routerLinkActive="active">Home</a> -->
+        <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        <a class="nav-item nav-link" routerLink="/listuser" routerLinkActive="active">UserList</a>
+        <a class="nav-item nav-link" routerLink="/tform" routerLinkActive="active">Tform</a>
+        <a class="nav-item nav-link" routerLink="/rform" routerLinkActive="active">Rform</a>
+        <a class="nav-item nav-link" routerLink="/pipe" routerLinkActive="active">Pipe</a>
+        <a class="nav-item nav-link" routerLink="/lifecycle" routerLinkActive="active">Lifecycle</a>
+        <a class="nav-item nav-link" routerLink="/first" routerLinkActive="active">first</a>
+        <a class="nav-item nav-link" routerLink="/second" routerLinkActive="active">Second</a>
+        <a class="nav-item nav-link" routerLink="/product" routerLinkActive="active">Product</a>
+        <a class="nav-item nav-link" routerLink="/grpah" routerLinkActive="active">Grpah</a>
+        
+         </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="colmd-12">
+          <div *ngIf="userButtonShow"> 
+            <h1> user addded button click..</h1>
+          </div>
+        </div>
+    </div>
+    
+</div>
+ <!-- adding parent comp -->
+<app-parent></app-parent>
+
+  <router-outlet></router-outlet>

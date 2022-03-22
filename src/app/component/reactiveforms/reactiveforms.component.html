@@ -1,0 +1,66 @@
+<p>reactiveforms works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <!-- <form [formGroup]="userprofileForm" (ngSubmit)="onSubmit()">  -->
+            <form [formGroup]="userprofileForm" (ngSubmit)="onSubmit()">
+                <!-- <div ngModelGroup="userImpData"> -->
+                <div formGroupName="userData">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" formControlName="username" class="form-control">
+                        <span class="help-text"
+                            *ngIf="!userprofileForm.get('userData.username').valid && userprofileForm.get('userData.username').touched">
+                            Please enter your name
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" formControlName="email" class="form-control">
+                        <span class="help-text"
+                            *ngIf="!userprofileForm.get('userData.email').valid && userprofileForm.get('userData.email').touched">
+                            Please enter your Email
+                        </span>
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="Mobile">Mobile:</label>
+                    <input type="text" id="mobile" formControlName="mobile" class="form-control">
+                    <span class="help-text"
+                        *ngIf="!userprofileForm.get('mobile').valid && userprofileForm.get('mobile').touched">
+                        Please enter your Mobile
+                    </span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div *ngFor="let item of gender">
+                        <input type="radio" name="gender" [value]="item">&nbsp;{{item}}
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <!-- </div> -->
+                <div class="row">
+                    <div formArrayName="hobbies">
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-primary" (click)="onHobby()">Add Hobby</button>
+                        </div>
+                        <div class="mt-3" *ngFor="let hobbies of hobbiesControls;let i = index" >
+                            <input type="text" class="form-control" [formControlName]="i">
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">Submit Hobbies</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>

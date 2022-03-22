@@ -1,0 +1,75 @@
+
+
+
+<div class="container">
+    <p>user works!</p>
+
+
+    <h3>UserId : {{UserId}}</h3>
+    <h4>userStatus : {{userStatus}}</h4>
+    <h5>user With User id {{UserId}} is {{userStatus}}</h5>
+    <div>
+        <p>using method...</p>
+        <h5>user With User id {{UserId}} is {{getUserStatus()}}</h5>
+    </div>
+    
+    <div class="row">
+        <div>
+            <button class="btn btn-primary" [disabled]="!allowUse" (click)="changeUserStatus()">ADD</button>
+        </div>
+        <p>{{allowUse}}</p>
+    
+        <p>{{userCreated}}</p>
+    </div>
+
+    <div class="row">
+        <div>
+            <label>Username:</label>
+            <input type="text" name="username"  id="username" class="form-control" (input)="onUpdateuser($event)">
+        </div>
+        <h3>username :{{username}}</h3>
+        <div>
+            <label>Full name:</label>
+            <input type="text" name="fullname"  [(ngModel)]="myFullname" id="fullname" class="form-control">
+        </div>
+        <h4>My Full Name:{{myFullname}}</h4>
+    </div>
+    <div class="row">
+        <div *ngIf="isuserCreated">
+                <p> user is created  name is {{myFullname}}</p>
+        </div>
+        <div>
+            <button class="btn btn-primary"  [disabled]="!allowUse" (click)="showUsername()">Submit</button>
+        </div>
+    </div>
+
+    <div class="row">
+    <p>ngIF with else coundation...</p>
+    <div *ngIf="isuserCreated;else nouser">
+        <p> user is created  name is {{myFullname}}</p>
+    </div>
+    <ng-template #nouser>
+        <div>no user created...</div>
+    </ng-template>
+    </div>
+    <br>
+
+    <div class="row">
+        <p>using local ref #acess the html Elemnt </p>
+       <h3>Add User</h3>
+       <div>
+        <label>Myname:</label>
+        <input type="text" name="myname" #myname  id="myname" class="form-control">
+    </div>
+    <br>
+    <div>
+        <button class="btn btn-primary"  [disabled]="!allowUse" (click)="addMyName(myname)">Submit</button>
+    </div>
+    <br>
+    <br>  <br>
+    <div>
+        <button class="btn btn-primary"   (click)="onUserClick()">User Added</button>
+    </div>
+   
+    </div>
+</div>

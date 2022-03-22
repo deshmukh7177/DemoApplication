@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <p>style works!</p>
+        <div class="row">
+            <div class="m2" [ngStyle]="{'background-color':getColour()}">
+            <h1>{{userID}} with {{userStatus}} is {{showUserStatus()}}</h1>
+
+            </div>
+</div>
+    <div class="row">
+        <p>Custom derctive</p>
+        <p [ngStyle]="{'background-color':'red'}">Yogesh Deshmukh...</p>
+      <div appRenderHighlight> Yogehs deshmukh</div>
+      <div appAppRenderHightlight>appAppRenderHightlight</div>
+    </div>
+
+    <h1>Set style using HostListener</h1>
+    <div appHostlistener> Pune To Chalisgaon</div>
+    <h1>Custom Directive</h1>
+    <div appCustomRenderhigHighLight>Custom Directive</div>
+
+    <div class="row">
+        <button class="btn btn-primary" (click)="clickMe()">Clcik me</button>
+    </div>
+</div>
+

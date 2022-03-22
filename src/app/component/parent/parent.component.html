@@ -1,0 +1,41 @@
+<!-- <p>parent works!</p>
+<button type="button" class="btn btn-primary" (click)="toggleChild()">Click</button>
+<input type="text" [(ngModel)]="myname" id="myname" >
+
+
+<app-child *ngIf="ischild" [myname]="myname">
+
+    <h1 #YDblog_data>Welcome to my Blog Yogesh Deshmukh...</h1>
+</app-child> -->
+
+
+<!-- Code written by Yogesh Deshmukh... -->
+<!-- <div class="YD">
+    <p> Communication between components Parent to Child</p>
+        <h1>Parent components</h1>
+        <h2>Data reviced from child to parent {{messageFromChild}}</h2>
+        <p>Second Parmeter</p>
+       <input type="text"  name="myaddress" [(ngModel)]="myAddressInParent"><br>&nbsp;
+
+        <input type="text" [(ngModel)]="channnelNameInParent">
+        <app-child [channnelNameInChild]="channnelNameInParent" (sendMessageEmmmiter)="reciveMessage($event)"></app-child>
+   <div class="row">
+       
+       <app-child [myAddressVar]="myAddressInParent"></app-child>
+   </div>
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 YD">
+          <h1>Parent components</h1>
+        <h2>Data reviced from child to parent {{messageFromChild}}</h2>
+        <p>Second Parmeter</p>
+        <label>Name:</label>
+       <input type="text"   [(ngModel)]="channnelNameInParent">
+            </div>
+            <div class="col-md-6">
+                TWO
+            </div>
+            <app-child [channnelNameInChild]="channnelNameInParent"></app-child>
+        </div>
+    </div>

@@ -1,0 +1,13 @@
+<p>pipe works!</p>
+
+<div class="contanier">
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngFor="let item of users">
+                <p>{{item.names |uppercase}}</p>
+                <p>{{item.JoinDate |date:'MMM d, y'}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
